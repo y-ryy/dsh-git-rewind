@@ -1,0 +1,51 @@
+{
+  "name": "dsh-git-rewind",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Message recall for DeepSeek Harness with Git-backed file checkpoints and a sidebar Git graph.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "test": "node --test test/*.test.js"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "src/**/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "rewind",
+    "undo",
+    "git",
+    "checkpoint"
+  ],
+  "license": "MIT"
+}

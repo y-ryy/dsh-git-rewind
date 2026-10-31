@@ -1,0 +1,5 @@
+# dsh-git-rewind — mount the plugin as one profile row.
+- insert:
+    - id: git-rewind
+      name: dsh-git-rewind
+      config: {}

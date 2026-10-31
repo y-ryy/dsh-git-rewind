@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Git Message Rewind",
+    "description": "Recall sent messages in place, restore workspace files from Git checkpoints, and browse checkpoints plus repository history as a sidebar graph."
+  }
+}
