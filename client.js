@@ -339,63 +339,63 @@ window.__ModuleLoader__.load({
     // ---------------------------------------------------------------------
     const CSS = `
       .dgr-root, .dgr-modal, .dgr-panel { box-sizing: border-box; }
-      .dgr-panel { height: 100%; min-height: 0; display: flex; flex-direction: column; color: var(--dsw-alias-text-primary, #1f2937); font-size: 12px; }
+      .dgr-panel { height: 100%; min-height: 0; display: flex; flex-direction: column; color: var(--dsw-alias-label-primary, #1f2937); font-size: 12px; }
       .dgr-head { display: flex; align-items: center; gap: 8px; padding: 10px 12px 6px; flex-wrap: wrap; }
       .dgr-title { font-size: 13px; font-weight: 600; margin-right: auto; }
-      .dgr-tabs { display: inline-flex; gap: 2px; padding: 2px; border-radius: 8px; background: var(--dsw-alias-bg-subtle, rgba(127,127,127,.12)); }
-      .dgr-tab { border: 0; background: transparent; color: var(--dsw-alias-text-secondary, #6b7280); padding: 4px 8px; border-radius: 6px; cursor: pointer; font: inherit; }
-      .dgr-tab.dgr-active { background: var(--dsw-alias-bg-elevated, #fff); color: var(--dsw-alias-text-primary, #111827); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
-      .dgr-status { display: flex; gap: 8px; align-items: center; padding: 0 12px 6px; color: var(--dsw-alias-text-secondary, #6b7280); font-size: 11px; flex-wrap: wrap; }
-      .dgr-pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px; border-radius: 999px; background: var(--dsw-alias-bg-subtle, rgba(127,127,127,.12)); color: var(--dsw-alias-text-secondary, #6b7280); }
+      .dgr-tabs { display: inline-flex; gap: 2px; padding: 2px; border-radius: 8px; background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.12)); }
+      .dgr-tab { border: 0; background: transparent; color: var(--dsw-alias-label-secondary, #6b7280); padding: 4px 8px; border-radius: 6px; cursor: pointer; font: inherit; }
+      .dgr-tab.dgr-active { background: var(--dsw-alias-bg-layer-1, #fff); color: var(--dsw-alias-label-primary, #111827); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+      .dgr-status { display: flex; gap: 8px; align-items: center; padding: 0 12px 6px; color: var(--dsw-alias-label-secondary, #6b7280); font-size: 11px; flex-wrap: wrap; }
+      .dgr-pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px; border-radius: 999px; background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.12)); color: var(--dsw-alias-label-secondary, #6b7280); }
       .dgr-toolbar { display: flex; gap: 6px; align-items: center; padding: 0 12px 8px; }
-      .dgr-search { flex: 1; min-width: 0; border: 1px solid var(--dsw-alias-border-subtle, rgba(127,127,127,.25)); border-radius: 7px; background: transparent; color: inherit; padding: 5px 8px; font: inherit; outline: none; }
-      .dgr-btn { border: 1px solid var(--dsw-alias-border-subtle, rgba(127,127,127,.25)); border-radius: 7px; background: transparent; color: inherit; padding: 4px 8px; cursor: pointer; font: inherit; white-space: nowrap; }
-      .dgr-btn:hover { background: var(--dsw-alias-bg-hover, rgba(127,127,127,.1)); }
+      .dgr-search { flex: 1; min-width: 0; border: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.25)); border-radius: 7px; background: transparent; color: inherit; padding: 5px 8px; font: inherit; outline: none; }
+      .dgr-btn { border: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.25)); border-radius: 7px; background: transparent; color: inherit; padding: 4px 8px; cursor: pointer; font: inherit; white-space: nowrap; }
+      .dgr-btn:hover { background: var(--dsw-alias-interactive-bg-hover, rgba(127,127,127,.1)); }
       .dgr-btn:disabled { opacity: .45; cursor: default; }
-      .dgr-btn.dgr-primary { background: var(--dsw-alias-accent-primary, #2563eb); border-color: transparent; color: #fff; }
-      .dgr-body { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: auto; border-top: 1px solid var(--dsw-alias-border-subtle, rgba(127,127,127,.18)); }
+      .dgr-btn.dgr-primary { background: var(--dsw-alias-state-business-primary, #2563eb); border-color: transparent; color: #fff; }
+      .dgr-body { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: auto; border-top: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.18)); }
       .dgr-panel.dgr-wide .dgr-body { flex-direction: row; overflow: hidden; }
       .dgr-graph-pane { min-width: 0; flex: 1; overflow: auto; }
-      .dgr-detail { flex: 0 0 300px; min-width: 0; border-left: 1px solid var(--dsw-alias-border-subtle, rgba(127,127,127,.18)); overflow: auto; padding: 10px 12px 16px; }
-      .dgr-narrow .dgr-detail { flex: none; border-left: 0; border-top: 1px solid var(--dsw-alias-border-subtle, rgba(127,127,127,.18)); max-height: 46%; }
-      .dgr-row { display: flex; gap: 6px; align-items: stretch; min-height: ${ROW_H}px; border-bottom: 1px solid var(--dsw-alias-border-subtle, rgba(127,127,127,.12)); cursor: pointer; }
-      .dgr-row:hover { background: var(--dsw-alias-bg-hover, rgba(127,127,127,.08)); }
-      .dgr-row.dgr-selected { background: var(--dsw-alias-bg-selected, rgba(76,141,255,.12)); }
+      .dgr-detail { flex: 0 0 300px; min-width: 0; border-left: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.18)); overflow: auto; padding: 10px 12px 16px; }
+      .dgr-narrow .dgr-detail { flex: none; border-left: 0; border-top: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.18)); max-height: 46%; }
+      .dgr-row { display: flex; gap: 6px; align-items: stretch; min-height: ${ROW_H}px; border-bottom: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.12)); cursor: pointer; }
+      .dgr-row:hover { background: var(--dsw-alias-interactive-bg-hover, rgba(127,127,127,.08)); }
+      .dgr-row.dgr-selected { background: var(--dsw-alias-interactive-bg-active, rgba(76,141,255,.12)); }
       .dgr-graph { flex: 0 0 auto; }
       .dgr-row-body { flex: 1; min-width: 0; padding: 5px 8px 4px 0; display: flex; flex-direction: column; justify-content: center; gap: 2px; }
       .dgr-row-title { display: flex; align-items: center; gap: 5px; min-width: 0; }
       .dgr-subject { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-      .dgr-hash { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--dsw-alias-text-secondary, #6b7280); font-size: 10px; }
-      .dgr-meta { display: flex; gap: 6px; align-items: center; color: var(--dsw-alias-text-secondary, #6b7280); font-size: 10px; min-width: 0; }
-      .dgr-badge { display: inline-flex; align-items: center; border-radius: 4px; padding: 1px 4px; font-size: 10px; line-height: 1.4; background: var(--dsw-alias-bg-subtle, rgba(127,127,127,.12)); color: var(--dsw-alias-text-secondary, #6b7280); }
-      .dgr-badge-current { background: rgba(37,99,235,.15); color: #2563eb; }
-      .dgr-badge-skip { background: rgba(245,158,11,.16); color: #b45309; }
-      .dgr-badge-repo { background: rgba(139,92,246,.15); color: #7c3aed; }
-      .dgr-empty { padding: 24px 16px; color: var(--dsw-alias-text-secondary, #6b7280); text-align: center; line-height: 1.6; }
+      .dgr-hash { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--dsw-alias-label-secondary, #6b7280); font-size: 10px; }
+      .dgr-meta { display: flex; gap: 6px; align-items: center; color: var(--dsw-alias-label-secondary, #6b7280); font-size: 10px; min-width: 0; }
+      .dgr-badge { display: inline-flex; align-items: center; border-radius: 4px; padding: 1px 4px; font-size: 10px; line-height: 1.4; background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.12)); color: var(--dsw-alias-label-secondary, #6b7280); }
+      .dgr-badge-current { background: rgba(37,99,235,.22); color: var(--dsw-alias-label-primary, #111827); }
+      .dgr-badge-skip { background: rgba(245,158,11,.22); color: var(--dsw-alias-label-primary, #111827); }
+      .dgr-badge-repo { background: rgba(139,92,246,.22); color: var(--dsw-alias-label-primary, #111827); }
+      .dgr-empty { padding: 24px 16px; color: var(--dsw-alias-label-secondary, #6b7280); text-align: center; line-height: 1.6; }
       .dgr-detail-title { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-weight: 600; margin-bottom: 6px; }
-      .dgr-detail-meta { color: var(--dsw-alias-text-secondary, #6b7280); font-size: 11px; line-height: 1.8; margin-bottom: 8px; }
+      .dgr-detail-meta { color: var(--dsw-alias-label-secondary, #6b7280); font-size: 11px; line-height: 1.8; margin-bottom: 8px; }
       .dgr-detail-actions { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
       .dgr-files { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
       .dgr-file { display: flex; gap: 6px; align-items: center; padding: 3px 4px; border-radius: 5px; cursor: pointer; min-width: 0; }
-      .dgr-file:hover { background: var(--dsw-alias-bg-hover, rgba(127,127,127,.1)); }
+      .dgr-file:hover { background: var(--dsw-alias-interactive-bg-hover, rgba(127,127,127,.1)); }
       .dgr-file-path { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; }
-      .dgr-status-m { color: #b45309; }
-      .dgr-status-a { color: #15803d; }
-      .dgr-status-d { color: #b91c1c; }
-      .dgr-status-r { color: #7c3aed; }
-      .dgr-diff { margin: 8px 0 0; padding: 8px; max-height: 260px; overflow: auto; white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; line-height: 1.5; background: var(--dsw-alias-bg-subtle, rgba(127,127,127,.1)); border-radius: 6px; }
+      .dgr-status-m { color: var(--dsw-alias-label-primary, #111827); background: rgba(245,158,11,.25); border-radius: 3px; padding: 0 3px; font-weight: 600; }
+      .dgr-status-a { color: var(--dsw-alias-label-primary, #111827); background: rgba(21,128,61,.25); border-radius: 3px; padding: 0 3px; font-weight: 600; }
+      .dgr-status-d { color: var(--dsw-alias-label-primary, #111827); background: rgba(185,28,28,.25); border-radius: 3px; padding: 0 3px; font-weight: 600; }
+      .dgr-status-r { color: var(--dsw-alias-label-primary, #111827); background: rgba(124,58,237,.25); border-radius: 3px; padding: 0 3px; font-weight: 600; }
+      .dgr-diff { margin: 8px 0 0; padding: 8px; max-height: 260px; overflow: auto; white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; line-height: 1.5; background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.1)); border-radius: 6px; }
       .dgr-modal { position: fixed; inset: 0; z-index: 2147483000; background: rgba(0,0,0,.42); display: flex; align-items: center; justify-content: center; padding: 24px; }
-      .dgr-modal-card { width: min(760px, 100%); max-height: 84vh; overflow: auto; background: var(--dsw-alias-bg-elevated, #fff); color: var(--dsw-alias-text-primary, #111827); border-radius: 12px; box-shadow: 0 24px 80px rgba(0,0,0,.35); padding: 16px 18px; }
+      .dgr-modal-card { width: min(760px, 100%); max-height: 84vh; overflow: auto; background: var(--dsw-alias-bg-layer-1, #fff); color: var(--dsw-alias-label-primary, #111827); border-radius: 12px; box-shadow: 0 24px 80px rgba(0,0,0,.35); padding: 16px 18px; }
       .dgr-modal-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-      .dgr-modal-sub { color: var(--dsw-alias-text-secondary, #6b7280); font-size: 11px; margin-bottom: 10px; }
-      .dgr-prompt { white-space: pre-wrap; line-height: 1.55; background: var(--dsw-alias-bg-subtle, rgba(127,127,127,.1)); border-radius: 8px; padding: 8px 10px; max-height: 120px; overflow: auto; margin: 6px 0 10px; }
+      .dgr-modal-sub { color: var(--dsw-alias-label-secondary, #6b7280); font-size: 11px; margin-bottom: 10px; }
+      .dgr-prompt { white-space: pre-wrap; line-height: 1.55; background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.1)); border-radius: 8px; padding: 8px 10px; max-height: 120px; overflow: auto; margin: 6px 0 10px; }
       .dgr-modes { display: flex; flex-direction: column; gap: 6px; margin: 8px 0 12px; }
-      .dgr-mode { display: flex; gap: 6px; align-items: flex-start; padding: 7px 8px; border: 1px solid var(--dsw-alias-border-subtle, rgba(127,127,127,.25)); border-radius: 8px; cursor: pointer; }
+      .dgr-mode { display: flex; gap: 6px; align-items: flex-start; padding: 7px 8px; border: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.25)); border-radius: 8px; cursor: pointer; }
       .dgr-mode.dgr-disabled { opacity: .5; cursor: default; }
       .dgr-mode input { margin-top: 2px; }
       .dgr-modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
       .dgr-error { color: #b91c1c; white-space: pre-wrap; margin: 8px 0; }
-      .dgr-note { color: var(--dsw-alias-text-secondary, #6b7280); font-size: 11px; margin-top: 6px; }
+      .dgr-note { color: var(--dsw-alias-label-secondary, #6b7280); font-size: 11px; margin-top: 6px; }
       .dgr-session-dot { width: 7px; height: 7px; border-radius: 50%; flex: 0 0 auto; }
       /* Join the built-in user-message action row (time + Copy) instead of
          stacking a second row below the bubble. The built-in row's class names
@@ -464,7 +464,7 @@ window.__ModuleLoader__.load({
           cy: center,
           r: 4,
           fill: PALETTE[(row.color ?? 0) % PALETTE.length],
-          stroke: 'var(--dsw-alias-bg-elevated, #fff)',
+          stroke: 'var(--dsw-alias-bg-layer-1, #fff)',
           strokeWidth: 1.5,
         }),
       )
@@ -1019,11 +1019,20 @@ window.__ModuleLoader__.load({
 
       const deps = { slots: ctx.slots, t }
 
+      /* The built-in user row calls its injected `renderSlotChain` while
+         rendering. A child-less wrapper entry is not given one, so supply a
+         no-op chain binding exactly like the shipped `steering` registration
+         does. NEVER re-declare `children: { 'conversation.chat.user.before': ... }`
+         here: the built-in user row already declares that chain child, and a
+         second declaration throws `slot "conversation.chat.user.before" is
+         already declared` while the client bundle loads, crashing the renderer
+         (Desktop renderer exited: crashed). */
       ctx.effect(() => ctx.slots.inject('conversation.chat.node', () => ctx.slots.register({
         name: 'conversation.chat.node',
         key: 'user',
         priority: -1,
         locale: 'chat',
+        inject: () => ({ renderSlotChain: () => null }),
       }, makeMessageActionView(deps))), 'dsh-git-rewind: user message action')
 
       const tabs = ctx.sidebarRightTabs
